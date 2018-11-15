@@ -1,0 +1,487 @@
+﻿<html>
+
+<head>
+    <script src="js/3rdParty/jquery-3.1.1.js" type="text/javascript"></script>
+    <script src="js/3rdParty/jquery.signalR-2.2.0.js" type="text/javascript"></script>
+    <script src="js/3rdParty/TweenMax.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="css/quiz.css?0620171515">
+    <link rel="stylesheet" type="text/css" href="css/app.css?0620171515">
+    <link rel="stylesheet" type="text/css" href="css/animate.css?0620171515">
+    <link href="css/fonts.css?0620171515" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+</head>
+
+<body id="body">
+    <div id="loader">
+        <div>
+            <p id="loadmessage"><span data-localeid="185302"></span></p>
+            <img src="images/LOADER-GIF.gif" loop="0">
+        </div>
+    </div>
+    <div id="container">
+        <div id="mobile-header" class="mobile-element">
+            <div class="exit"><div><span data-localeid="139845">Exit Game</span></div>
+        </div>
+        <div id="mobile-player-widget-wrapper">
+                <div id="mobile-player-widget">
+                    <div id="mobile-player-widget-tophalf">
+                        <div class="col col1">
+                            <img class="playeravatar">
+                        </div>
+                        <div class="col col2">
+                            <div class="col2-content">
+                                <span class="PlayerName"></span>
+                                <br/>
+                                <span class="PlayerCountry"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="mobile-player-widget-bottomhalf">
+                        <div class="player-data">
+                            <ul>
+                                <li><span class="subhead" data-localeid="185350">Overall Wins</span><br><span class="PlayerWins">-99</span></li>
+                                <li id="mobile-player-mid-li"><span class="subhead" data-localeid="185351">Games Played</span><br><span class="Plays">-99</span></li>
+                                <li><span class="subhead" data-localeid="185428">Rating</span><br><span class="Rating">-99</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="mobile-player-winlosswidget">
+                <div class="winsies" data-localeid="185391">WON</div>
+                <div class="lossies" data-localeid="185392">LOST</div>
+                <div style="clear:both"></div>
+                <div class="winsvslosses">
+                    <div class="PlayerWins"></div>
+                    <div class="PlayerLosses"></div>
+                </div>
+            </div>
+            <div id="show-badges-button" class="button nonquiz">
+                <span class='badge-progression-text' data-localeid="185347">Badge Progression</span>
+                <div><span><img src="images/mobile_badges_arrow.png"/></span></div>
+            </div>
+            
+        </div>
+            <div id="player-header-wrapper">
+            <div id="player-header" class="desktop-element">
+                <div id="player-header-tophalf">
+                    <div class="col col1">
+                        <img class="playeravatar">
+                    </div>
+                    <div class="col col2">
+                        <div>
+                            <span class="PlayerName"></span><span class="separator">&nbsp;|&nbsp;</span><span class="PlayerCountry"></span>
+                        </div>
+                    </div>
+                    <div class="col col3">
+                        <div id="winlosswidget">
+                            <div class="winsies" data-localeid="185391">WON</div>
+                            <div class="lossies" data-localeid="185392">LOST</div>
+                            <div style="clear:both"></div>
+                            <div class="winsvslosses">
+                                <div class="PlayerWins"></div>
+                                <div class="PlayerLosses"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="player-header-bottomhalf">
+                    <div class="col col1"></div>
+                    <div class="col col2">
+                        <div class="player-data">
+                            <ul>
+                                <li><span class="subhead" data-localeid="185350">Overall Wins</span><br><span class="PlayerWins">-99</span></li>
+                                <li id="desktop-player-mid-li"><span class="subhead" data-localeid="185351">Games Played</span><br><span class="Plays">-99</span></li>
+                                <li><span class="subhead" data-localeid="185428">Rating</span><br><span class="Rating">-99</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col col3"></div>
+                </div>
+                <div class="exit"><span data-localeid="185336">Exit Game</span>
+                </div>
+            </div>
+        </div>
+        <div id="innertable">
+            <div id="info" class="desktop-element">
+                <div class="wrapper">
+                    <h2 data-localeid="185303">How to Play</h2>
+                    <p><span data-localeid="185304">You will be presented with a list of challengers. Select one, review their stats, and initiate the match!</span>
+                    <br><br>
+                    <span data-localeid="185305">You’ll have 60 seconds to answer all five questions. Watch the timer at the top of your screen—if you answer the most questions correctly in the shortest time, you’ll win! Play every day to improve your rating and earn Badges. Badges have multiple levels available for even more chances to earn.</span>
+                    <br><br>
+                    <span data-localeid="185306">You can play five matches each day with multiple opportunities to earn more! Remember to visit and duel often. If you’re inactive for too long, your rating will go down.</span></p>
+                    <div id="StartTutorial" class="button"><div data-localeid="185307">Start Tutorial</div></div>
+                    <div class="SkipTutorial"><div data-localeid="191789">Skip Tutorial</div></div>
+                </div>
+            </div>
+            
+            <div id="dashboard">
+                <div id="dashboard-wrapper" class="nonquiz">
+                    <div id="dashboard-header">
+                    </div>
+
+                    <div id="recent-badges" class="box desktop-element">
+                        <h2 data-localeid="185348">Recent Badges</h2>
+                    </div>
+                    <div id="badge-progress" class="box">
+                        <h2 class='badge-progression-text' data-localeid="185347">Badge Progression</h2>
+                        <div id="badge-progress-header">
+                            <span class='badge-progression-text' data-localeid="185347">Badge Progression</span>
+                            <div><span><img src="images/mobile_badges_arrow_up.png"/></span></div>
+                        </div>
+                        <div id="badge-wrapper">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="quiz_matchup">
+                    <div id="Summary" class="header">
+                        <div class="quizsummary">
+                            <h1 id="matchendmessage" class="won">
+                                <span class="match-end-message" data-localeid="185324">You won!</span>
+                                &nbsp;&nbsp;&nbsp;
+                                <span id="pointsgained" class="pointschange match-end-points"> </span>
+                            </h1>
+
+                            <h1 id="matchendmessage" class="lost">
+                                <span class="match-end-message" data-localeid="185333">Defeated!</span>
+                                &nbsp;&nbsp;&nbsp;
+                                <span id="pointsLost" class="pointschange match-end-points"> </span>
+                            </h1>
+                        </div>
+                        <h2 class="quizsummary second-heading"><span class="correct"></span></h2>
+
+                        <h2 class="quizmatchup spacer">&nbsp;</h2>
+                        <h1 class="quizmatchup second-heading" data-localeid="185339">Preview Opponent</h1>
+                    </div>
+                    <div id="match-badge-progress">
+                        <h2 class='badge-progression-text' data-localeid="185347">Badge Progression</h2>
+                        <div id="match-badge-wrapper">
+                        </div>
+                    </div>
+
+                    <div id="opponentinfo">
+                        <div class="userbox">
+                            <div class="topsummary">
+                                <div class="match-player-avatar">
+                                    <img id="OpponentMatchup" class="challengeravatar" src="">
+                                </div>
+                                <div class="match-player-mid">
+                                    <div class="match-player-mid-content pregame">
+                                        <span class="OpponentMatchupName MatchupName match-player-name"></span><br>
+                                        <span class="OpponentMatchupCountry MatchupCountry match-player-country"></span><br>
+                                        <p id="opponent-performance" class="quizsummary"><span class="correct"></span></p>
+                                    </div>
+                                </div>
+                                <div class="match-player-flag">
+                                    <img class="OpponentMatchupFlag" />
+                                </div>
+                            </div>
+                            <div class="botsummary">
+                                <ul>
+                                    <li><span class="subhead" data-localeid="185350">Overall Wins</span><br><span id="OpponentWins"></span></li>
+                                    <li id="opponent-info-mid-li"><span class="subhead" data-localeid="185351">Games Played</span><br><span id="OpponentPlays"></span></li>
+                                    <li><span class="subhead" data-localeid="185428">Rating</span><br><span id="OpponentRating"></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="opponentinfomatchup" class="button quizmatchup table">
+                            <div id="startgame" class="col"><div data-localeid="185352">Start</div></div>
+                        </div>
+                        <div id="cancel-gameplay" class="quizmatchup" data-localeid="185129">Cancel</div>
+
+                        <div id="donereview" class="button quizsummary"><div data-localeid="185336">Close</div></div>
+                    </div>
+                </div>
+            </div>
+            <!-- end #dashboard -->
+
+            <div id="challenge">
+                <div id="challenge-header" class="header">
+                    <h1 data-localeid="185338">Choose Your Opponent.</h1>
+                    <h2 class="second-heading"><span class="PlaysAvailable"></span></h2>
+                </div>
+                <div id="headingbar">
+                    <span id="challengeColScore" data-localeid="185428">Rating</span>
+                    <span id="challengeColName">
+                        <span data-localeid="185342">Name</span>
+                        <span data-localeid="185418">Country</span>
+                        <span data-localeid="185343">Wins</span>
+                    </span>
+                </div>
+                <div id="User1" class="Player">
+                    <ul>
+                        <li class="Score"></li>
+                        <li class="Image-wrapper">
+                            <div class="Image"><img src=""></div>
+                            <div class="tutorial-check"><img src="images/check.png"/></div>
+                        </li>
+                        <li class="PlayerInfo">
+                            <div>
+                                <span class="PublicName"></span>
+                            </div>
+                            <span class="pipe separator"> | </span>
+                            <div>
+                                <span class="PublicLocation"></span>
+                                <span class="separator"> | </span>
+                                <span class="Wins"></span>&nbsp;<span data-localeid="185343">Wins</span>
+                            </div>
+                        </li>
+                        <li></li>
+                        <li class="ChallengerFlag"><img class="usercountryimage" /></li>
+                    </ul>
+                </div>
+                <div id="User2" class="Player">
+                    <ul>
+                        <li class="Score"></li>
+                        <li class="Image-wrapper">
+                            <div class="Image"><img src=""></div>
+                            <div class="tutorial-check"><img src="images/check.png"/></div>
+                        </li>
+                        <li class="PlayerInfo">
+                            <div>
+                                <span class="PublicName"></span>
+                            </div>
+                            <span class="pipe separator"> | </span>
+                            <div>
+                                <span class="PublicLocation"></span>
+                                <span class="separator"> | </span>
+                                <span class="Wins"></span>&nbsp;<span data-localeid="185343">Wins</span>
+                            </div>
+                        </li>
+                        <li></li>
+                        <li class="ChallengerFlag"><img class="usercountryimage" /></li>
+                    </ul>
+                </div>
+                <div id="User3" class="Player">
+                    <ul>
+                        <li class="Score"></li>
+                        <li class="Image-wrapper">
+                            <div class="Image"><img src=""></div>
+                            <div class="tutorial-check"><img src="images/check.png"/></div>
+                        </li>
+                        <li class="PlayerInfo">
+                            <div>
+                                <span class="PublicName"></span>
+                            </div>
+                            <span class="pipe separator"> | </span>
+                            <div>
+                                <span class="PublicLocation"></span>
+                                <span class="separator"> | </span>
+                                <span class="Wins"></span>&nbsp;<span data-localeid="185343">Wins</span>
+                            </div>
+                        </li>
+                        <li></li>
+                        <li class="ChallengerFlag"><img class="usercountryimage" /></li>
+                    </ul>
+                </div>
+                <div id="User4" class="Player">
+                    <ul>
+                        <li class="Score"></li>
+                        <li class="Image-wrapper">
+                            <div class="Image"><img src=""></div>
+                        </li>
+                        <li class="PlayerInfo">
+                            <div>
+                                <span class="PublicName"></span>
+                            </div>
+                            <span class="pipe separator"> | </span>
+                            <div>
+                                <span class="PublicLocation"></span>
+                                <span class="separator"> | </span>
+                                <span class="Wins"></span>&nbsp;<span data-localeid="185343">Wins</span>
+                            </div>
+                        </li>
+                        <li></li>
+                        <li class="ChallengerFlag"><img class="usercountryimage" /></li>
+                    </ul>
+                </div>
+                <div id="User5" class="Player">
+                    <ul>
+                        <li class="Score"></li>
+                        <li class="Image-wrapper">
+                            <div class="Image"><img src=""></div>
+                        </li>
+                        <li class="PlayerInfo">
+                            <div>
+                                <span class="PublicName"></span>
+                            </div>
+                            <span class="pipe separator"> | </span>
+                            <div>
+                                <span class="PublicLocation"></span>
+                                <span class="separator"> | </span>
+                                <span class="Wins"></span>&nbsp;<span data-localeid="185343">Wins</span>
+                            </div>
+                        </li>
+                        <li></li>
+                        <li class="ChallengerFlag"><img class="usercountryimage" /></li>
+                    </ul>
+                </div>
+                <div id="User6" class="Player">
+                    <ul>
+                        <li class="Score"></li>
+                        <li class="Image-wrapper">
+                            <div class="Image"><img src=""></div>
+                        </li>
+                        <li class="PlayerInfo">
+                            <div>
+                                <span class="PublicName"></span>
+                            </div>
+                            <span class="pipe separator"> | </span>
+                            <div>
+                                <span class="PublicLocation"></span>
+                                <span class="separator"> | </span>
+                                <span class="Wins"></span>&nbsp;<span data-localeid="185343">Wins</span>
+                            </div>
+                        </li>
+                        <li></li>
+                        <li class="ChallengerFlag"><img class="usercountryimage" /></li>
+                    </ul>
+                </div>
+                <div id="User7" class="Player">
+                    <ul>
+                        <li class="Score"></li>
+                        <li class="Image-wrapper">
+                            <div class="Image"><img src=""></div>
+                        </li>
+                        <li class="PlayerInfo">
+                            <div>
+                                <span class="PublicName"></span>
+                            </div>
+                            <span class="pipe separator"> | </span>
+                            <div>
+                                <span class="PublicLocation"></span>
+                                <span class="separator"> | </span>
+                                <span class="Wins"></span>&nbsp;<span data-localeid="185343">Wins</span>
+                            </div>
+                        </li>
+                        <li></li>
+                        <li class="ChallengerFlag"><img class="usercountryimage" /></li>
+                    </ul>
+                </div>
+                <div id="User8" class="Player">
+                    <ul>
+                        <li class="Score"></li>
+                        <li class="Image-wrapper">
+                            <div class="Image"><img src=""></div>
+                        </li>
+                        <li class="PlayerInfo">
+                            <div>
+                                <span class="PublicName"></span>
+                            </div>
+                            <span class="pipe separator"> | </span>
+                            <div>
+                                <span class="PublicLocation"></span>
+                                <span class="separator"> | </span>
+                                <span class="Wins"></span>&nbsp;<span data-localeid="185343">Wins</span>
+                            </div>
+                        </li>
+                        <li></li>
+                        <li class="ChallengerFlag"><img class="usercountryimage" /></li>
+                    </ul>
+                </div>
+                <div id="User9" class="Player">
+                    <ul>
+                        <li class="Score"></li>
+                        <li class="Image-wrapper">
+                            <div class="Image"><img src=""></div>
+                        </li>
+                        <li class="PlayerInfo">
+                            <div>
+                                <span class="PublicName"></span>
+                            </div>
+                            <span class="pipe separator"> | </span>
+                            <div>
+                                <span class="PublicLocation"></span>
+                                <span class="separator"> | </span>
+                                <span class="Wins"></span>&nbsp;<span data-localeid="185343">Wins</span>
+                            </div>
+                        </li>
+                        <li></li>
+                        <li class="ChallengerFlag"><img class="usercountryimage" /></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- end #challenge -->
+        </div>
+        <!-- end #innertable -->
+    </div>
+    <!-- end #container -->
+
+    <div id="quiz_box" class="quiz">
+        <div id="TopBar" class="quiz">
+            <div>
+                <img id="player" class="playeravatar" src="">
+            </div>
+            <div id="timer">
+                <div id="countdown"></div>
+                <span data-localeid="185299">EDGE ARENA</span>
+            </div>
+            <div>
+                <img id="challenger" class="challengeravatar" src="">
+            </div>
+        </div>
+        <div id="leftside">
+            <div></div>
+            <hr>
+            <div></div>
+            <hr>
+            <div></div>
+            <hr>
+            <div></div>
+            <hr>
+            <div></div>
+        </div>
+        <div id="rightside">
+            <div></div>
+            <hr>
+            <div></div>
+            <hr>
+            <div></div>
+            <hr>
+            <div></div>
+            <hr>
+            <div></div>
+        </div>
+    </div>
+
+    <div id="shade"></div>
+
+    <div id="backing">
+        <div id="tutorialmessage">
+            <div id="tutorialheader"><span>TUTORIAL x of x</span>
+                <div id="tutorialclose-wrapper">
+                    <div id="tutorialclose">
+                        <img src="images/Rectangle-1223-copy.png">
+                    </div>
+                </div>
+            </div>
+            <div id="tutorialcontent">
+                <div id="messageContent"></div>
+                <div class="SkipTutorial"><div data-localeid="191789">Skip Tutorial</div></div>
+            </div>
+        </div>
+    </div>
+    <script>
+function makeid()
+{
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+    for( var i=0; i < 8; i++ )
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+    return text;
+}
+var x = makeid();
+
+document.write('<scri'+'pt type="text/javascript" src="app/all.js?_='+x+'" > </scr'+'ipt>');</script>   
+
+</body>
+
+</html> 
+<script>
+
+
+</script>
