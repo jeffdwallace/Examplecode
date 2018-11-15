@@ -1,0 +1,59 @@
+/*@-moz-document url-prefix() { 
+body, .intelClear, #quiz-body {	font-family: IntelClear, simsun }
+.verdana {	font-family: Verdana, simsun }
+}
+
+
+*/
+
+
+/*INTEL CLEAR*/
+
+/* normal */
+@font-face {
+	font-family: 'IntelClear-chinese';
+	src: url('/asmo/Flash/ChallengesGlobal/fonts/Intel_Clear/Chinese/IntelClear_Hans_W_Rg.eot');
+	src: url('/asmo/Flash/ChallengesGlobal/fonts/Intel_Clear/Chinese/IntelClear_Hans_W_Rg.eot?#iefix') format('embedded-opentype'),  url('/asmo/Flash/ChallengesGlobal/fonts/Intel_Clear/Chinese/IntelClear_Hans_W_Rg.woff') format("woff"),  url('/asmo/Flash/ChallengesGlobal/fonts/Intel_Clear/Chinese/IntelClear_Hans_W_Rg.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* bold */
+@font-face {
+	font-family: 'IntelClear-chinese';
+	src: url('/asmo/Flash/ChallengesGlobal/fonts/Intel_Clear/Chinese/IntelClear_Hans_W_Bd.eot');
+	src: url('/asmo/Flash/ChallengesGlobal/fonts/Intel_Clear/Chinese/IntelClear_Hans_W_Bd.eot?#iefix') format('embedded-opentype'),  url('/asmo/Flash/ChallengesGlobal/fonts/Intel_Clear/Chinese/IntelClear_Hans_W_Bd.woff') format("woff"),  url('/asmo/Flash/ChallengesGlobal/fonts/Intel_Clear/Chinese/IntelClear_Hans_W_Bd.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+/* lighter */
+@font-face {
+	font-family: 'IntelClear-chinese';
+	src: url('/asmo/Flash/ChallengesGlobal/fonts/Intel_Clear/Chinese/IntelClear_Hans_W_Lt.eot');
+	src: url('/asmo/Flash/ChallengesGlobal/fonts/Intel_Clear/Chinese/IntelClear_Hans_W_Lt?#iefix') format('embedded-opentype'),  url('/asmo/Flash/ChallengesGlobal/fonts/Intel_Clear/Chinese/IntelClear_Hans_W_Lt.woff') format("woff"),  url('/asmo/Flash/ChallengesGlobal/fonts/Intel_Clear/Chinese/IntelClear_Hans_W_Lt.ttf') format('truetype');
+	font-weight: 200;
+	font-style: normal;
+}
+
+
+
+.intelClear {
+	font-family: IntelClear-chinese, IntelClear, Verdana, Arial !important;
+}
+
+.neoSans {
+	font-family: IntelClear-chinese, IntelClear, Verdana, Arial !important;
+}
+
+#quiz-body {
+   font-family: IntelClear-chinese, IntelClear, Verdana, Arial !important;  
+}
+
+#quiz-body .neoSans {  font-family: IntelClear-chinese, IntelClear, Verdana, Arial !important; } 
+
+#legal_wrapper_full_inner {  font-family: IntelClear-chinese, IntelClear, Verdana, Arial !important; } 
+
+*, *:before, *:after {
+	font-family: IntelClear-chinese, IntelClear, Verdana, Arial !important;
+}

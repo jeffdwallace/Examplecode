@@ -1,0 +1,314 @@
+.button {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  line-height: 40px;
+  background-color: #13c86b;
+  border-radius: 10px;
+  margin: 20px auto;
+}
+@media only screen and (min-width: 785px) {
+  .button {
+    border-radius: 17px;
+  }
+}
+.badge {
+  border-radius: 10px;
+  display: inline-block;
+  padding-top: 8px;
+  width: 60px;
+  height: 80px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 1;
+  position: relative;
+}
+@media only screen and (min-width: 785px) {
+  .badge {
+    border-radius: 17px;
+  }
+}
+@media only screen and (min-width: 468px) {
+  .badge {
+    width: 90px;
+    height: 120px;
+  }
+}
+.badge img {
+  margin-top: 7%;
+  width: 90%;
+}
+.badge .Progress {
+  width: 96%;
+  height: 8px;
+  background-color: #8a9297;
+  margin: 10px auto 0 auto;
+}
+.badge .barcolor {
+  height: 8px;
+  background-color: #13c86b;
+  width: 0;
+}
+.badge .ranknumber {
+  display: none;
+  position: absolute;
+  top: 2;
+  right: 12%;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 3px solid #00aef0;
+  background-color: #0B4B87;
+}
+.badge .ranknumber div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+}
+@media only screen and (min-width: 468px) {
+  .badge .ranknumber {
+    top: 8;
+    width: 22px;
+    height: 22px;
+  }
+  .badge .ranknumber span {
+    font-size: 16px;
+  }
+}
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+.header {
+  margin: 0 0 15px 0;
+}
+.header h1 {
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.header h2 {
+  font-size: 16px;
+}
+.header .second-heading {
+  margin-top: 10px;
+}
+@media only screen and (min-width: 468px) {
+  .header {
+    margin: 10px auto 30px auto;
+  }
+  .header h1 {
+    font-size: 26px;
+  }
+  .header h2 {
+    font-size: 20px;
+  }
+  .header .second-heading {
+    margin-top: 10px;
+  }
+}
+h1,
+h2 {
+  margin: 0;
+  padding: 0;
+}
+#player-header {
+  min-width: 800px;
+  border-radius: 10px;
+  min-height: 125px;
+  position: relative;
+  margin: 50px 15px 20px 15px;
+}
+@media only screen and (min-width: 785px) {
+  #player-header {
+    border-radius: 17px;
+  }
+}
+#player-header #player-header-tophalf {
+  border-radius: 10px 10px 0 0 ;
+  background-color: #00aef0;
+  height: 60px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+@media only screen and (min-width: 785px) {
+  #player-header #player-header-tophalf {
+    border-radius: 17px 17px 0 0;
+  }
+}
+#player-header #player-header-bottomhalf {
+  border-radius: 10px;
+  background-color: #0085c3;
+  width: 100%;
+  padding-top: 60px;
+  position: absolute;
+  top: 0;
+}
+@media only screen and (min-width: 785px) {
+  #player-header #player-header-bottomhalf {
+    border-radius: 17px;
+  }
+}
+#player-header .col {
+  display: inline-block;
+  float: left;
+  text-align: left;
+  list-style: none;
+  cursor: pointer;
+  vertical-align: middle;
+  padding: 10px;
+}
+#player-header .col1 {
+  width: 120px;
+  text-align: left;
+}
+#player-header .col1 .playeravatar {
+  height: 60px;
+  width: 60px;
+  margin: 25px;
+  border: 1px solid #ddd;
+  outline: 10px solid rgba(0, 0, 0, 0.2);
+}
+#player-header .col2 {
+  width: 37%;
+}
+#player-header .col2 .PlayerName {
+  margin-left: 5px;
+  font-size: 20px;
+  font-weight: 600;
+}
+#player-header .col2 .player-data .subhead {
+  font-size: 11px;
+}
+#player-header .col2 .player-data span {
+  font-size: 20px;
+  font-weight: 600;
+}
+#player-header .col2 .player-data ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+#player-header .col2 .player-data ul li {
+  width: 30%;
+  text-align: center;
+  padding: 5px;
+  display: inline-block;
+  list-style-type: none;
+}
+#player-header .col2 .player-data ul li:nth-child(2) {
+  width: 37%;
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+}
+#player-header .col3 {
+  width: 48%;
+  position: relative;
+  float: right;
+}
+#player-header .col3 #winlosswidget {
+  max-width: 500px;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px auto;
+  min-height: 80px;
+  font-size: 16px;
+  width: 96%;
+  background-color: white;
+  color: black;
+  border-color: #ddd;
+}
+@media only screen and (min-width: 785px) {
+  #player-header .col3 #winlosswidget {
+    border-radius: 17px;
+  }
+}
+@media only screen and (min-width: 785px) {
+  #player-header .col3 #winlosswidget {
+    border-radius: 17px;
+  }
+}
+#player-header .col3 #winlosswidget .winsies {
+  float: left;
+  color: #00aef0;
+  padding-left: 10px;
+}
+#player-header .col3 #winlosswidget .lossies {
+  float: right;
+  padding-right: 10px;
+  color: #475256;
+}
+#player-header .col3 #winlosswidget .winsvslosses {
+  color: white;
+  margin: 5px 10px;
+  border-radius: 10px;
+  height: 30px;
+  display: table;
+  min-width: calc(100% - 20px);
+  overflow: hidden;
+}
+@media only screen and (min-width: 785px) {
+  #player-header .col3 #winlosswidget .winsvslosses {
+    border-radius: 17px;
+  }
+}
+#player-header .col3 #winlosswidget .winsvslosses .PlayerWins {
+  display: table-cell;
+  background-color: #00aef0;
+  margin: 0 10px;
+  font-size: 20px;
+  vertical-align: middle;
+  font-weight: 600;
+  height: 100%;
+  padding: 3px 10px;
+}
+#player-header .col3 #winlosswidget .winsvslosses .PlayerLosses {
+  display: table-cell;
+  height: 100%;
+  font-size: 20px;
+  vertical-align: middle;
+  font-weight: 600;
+  text-align: right;
+  padding: 0 10px;
+  background-color: #475256;
+}
+#player-header .exit {
+  position: absolute;
+  top: -35px;
+  right: 0;
+  height: 24px;
+  width: 115px;
+  padding: 0 20px;
+  background-color: #475256;
+  border-radius: 17px;
+  font-size: 12px;
+  font-style: italic;
+  z-index: 9999;
+  cursor: pointer;
+}
+#player-header .exit span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+#player-header .exit img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  transform: translate(-49%, -50%);
+  height: 65%;
+  width: 65%;
+}

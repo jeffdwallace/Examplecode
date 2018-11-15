@@ -1,0 +1,78 @@
+
+/*INTEL CLEAR*/
+
+/* normal */
+@font-face {
+	font-family: 'IntelClear-gre';
+	src: url('fonts/Intel_Clear/Grek/IntelClear_WGrek_Rg.eot');
+	src: url('fonts/Intel_Clear/Grek/IntelClear_WGrek_Rg.eot?#iefix') format('embedded-opentype'),  url('fonts/Intel_Clear/Grek/IntelClear_WGrek_Rg.woff') format("woff"),  url('fonts/Intel_Clear/Grek/IntelClear_WGrek_Rg.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* bold */
+@font-face {
+	font-family: 'IntelClear-gre';
+	src: url('fonts/Intel_Clear/Grek/IntelClear_WGrek_Bd.eot');
+	src: url('fonts/Intel_Clear/Grek/IntelClear_WGrek_Bd.eot?#iefix') format('embedded-opentype'),  url('fonts/Intel_Clear/Grek/IntelClear_WGrek_Bd.woff') format("woff"),  url('fonts/Intel_Clear/Grek/IntelClear_WGrek_Bd.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+/* italic */
+@font-face {
+	font-family: 'IntelClear-gre';
+	src: url('fonts/Intel_Clear/Grek/IntelClear_WGrek_It.eot');
+	src: url('fonts/Intel_Clear/Grek/IntelClear_WGrek_It?#iefix') format('embedded-opentype'),  url('fonts/Intel_Clear/Grek/IntelClear_WGrek_It.woff') format("woff"),  url('fonts/Intel_Clear/Grek/IntelClear_WGrek_It.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+
+/* bold italic */
+@font-face {
+	font-family: 'IntelClear-gre';
+	src: url('fonts/Intel_Clear/Grek/IntelClear_WGrek_BdIt.eot');
+	src: url('fonts/Intel_Clear/Grek/IntelClear_WGrek_BdIt?#iefix') format('embedded-opentype'),  url('fonts/Intel_Clear/Grek/IntelClear_WGrek_BdIt.woff') format("woff"),  url('fonts/Intel_Clear/Grek/IntelClear_WGrek_BdIt.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+}
+
+/* lighter */
+@font-face {
+	font-family: 'IntelClear-gre';
+	src: url('fonts/Intel_Clear/Grek/IntelClear_WGrek_Lt.eot');
+	src: url('fonts/Intel_Clear/Grek/IntelClear_WGrek_Lt?#iefix') format('embedded-opentype'),  url('fonts/Intel_Clear/Grek/IntelClear_WGrek_Lt.woff') format("woff"),  url('fonts/Intel_Clear/Grek/IntelClear_WGrek_Lt.ttf') format('truetype');
+	font-weight: 200;
+	font-style: normal;
+}
+
+/* lighter italic */
+@font-face {
+	font-family: 'IntelClear-gre';
+	src: url('fonts/Intel_Clear/Grek/IntelClear_WGrek_LtIt.eot');
+	src: url('fonts/Intel_Clear/Grek/IntelClear_WGrek_LtIt?#iefix') format('embedded-opentype'),  url('fonts/Intel_Clear/Grek/IntelClear_WGrek_LtIt.woff') format("woff"),  url('fonts/Intel_Clear/Grek/IntelClear_WGrek_LtIt.ttf') format('truetype');
+	font-weight: 200;
+	font-style: italic;
+}
+
+.intelClear {
+	font-family: IntelClear-gre, IntelClear,  Verdana, Arial !important;
+}
+
+.neoSans {
+	font-family: IntelClear-gre, IntelClear,  Verdana, Arial !important;
+}
+
+#quiz-body {
+    font-family: IntelClear-gre, IntelClear, Verdana, Arial !important;  
+	
+}
+
+#quiz-body .neoSans {  font-family: IntelClear-gre, IntelClear, Verdana, Arial !important; } 
+
+
+#legal_wrapper_full_inner {  font-family: IntelClear-gre, IntelClear, Verdana, Arial !important; } 
+
+*, *:before, *:after {
+  	font-family: IntelClear-gre, IntelClear,  Verdana, Arial !important;
+}

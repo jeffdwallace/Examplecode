@@ -1,0 +1,76 @@
+
+/*INTEL CLEAR*/
+
+/* normal */
+@font-face {
+	font-family: 'IntelClear-vi';
+	src: url('fonts/Intel_Clear/Viet/IntelClear_Wvi_Rg.eot');
+	src: url('fonts/Intel_Clear/Viet/IntelClear_Wvi_Rg.eot?#iefix') format('embedded-opentype'),  url('fonts/Intel_Clear/Viet/IntelClear_Wvi_Rg.woff') format("woff"),  url('fonts/Intel_Clear/Viet/IntelClear_Wvi_Rg.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* bold */
+@font-face {
+	font-family: 'IntelClear-vi';
+	src: url('fonts/Intel_Clear/Viet/IntelClear_Wvi_Bd.eot');
+	src: url('fonts/Intel_Clear/Viet/IntelClear_Wvi_Bd.eot?#iefix') format('embedded-opentype'),  url('fonts/Intel_Clear/Viet/IntelClear_Wvi_Bd.woff') format("woff"),  url('fonts/Intel_Clear/Viet/IntelClear_Wvi_Bd.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+/* italic */
+@font-face {
+	font-family: 'IntelClear-vi';
+	src: url('fonts/Intel_Clear/Viet/IntelClear_Wvi_It.eot');
+	src: url('fonts/Intel_Clear/Viet/IntelClear_Wvi_It?#iefix') format('embedded-opentype'),  url('fonts/Intel_Clear/Viet/IntelClear_Wvi_It.woff') format("woff"),  url('fonts/Intel_Clear/Viet/IntelClear_Wvi_It.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+
+/* bold italic */
+@font-face {
+	font-family: 'IntelClear-vi';
+	src: url('fonts/Intel_Clear/Viet/IntelClear_Wvi_BdIt.eot');
+	src: url('fonts/Intel_Clear/Viet/IntelClear_Wvi_BdIt?#iefix') format('embedded-opentype'),  url('fonts/Intel_Clear/Viet/IntelClear_Wvi_BdIt.woff') format("woff"),  url('fonts/Intel_Clear/Viet/IntelClear_Wvi_BdIt.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+}
+
+/* lighter */
+@font-face {
+	font-family: 'IntelClear-vi';
+	src: url('fonts/Intel_Clear/Viet/IntelClear_Wvi_Lt.eot');
+	src: url('fonts/Intel_Clear/Viet/IntelClear_Wvi_Lt?#iefix') format('embedded-opentype'),  url('fonts/Intel_Clear/Viet/IntelClear_Wvi_Lt.woff') format("woff"),  url('fonts/Intel_Clear/Viet/IntelClear_Wvi_Lt.ttf') format('truetype');
+	font-weight: 200;
+	font-style: normal;
+}
+
+/* lighter italic */
+@font-face {
+	font-family: 'IntelClear-vi';
+	src: url('fonts/Intel_Clear/Viet/IntelClear_Wvi_LtIt.eot');
+	src: url('fonts/Intel_Clear/Viet/IntelClear_Wvi_LtIt?#iefix') format('embedded-opentype'),  url('fonts/Intel_Clear/Viet/IntelClear_Wvi_LtIt.woff') format("woff"),  url('fonts/Intel_Clear/Viet/IntelClear_Wvi_LtIt.ttf') format('truetype');
+	font-weight: 200;
+	font-style: italic;
+}
+
+.intelClear {
+	font-family: IntelClear-vi, IntelClear, Verdana, Arial !important;
+}
+
+.neoSans {
+	font-family: IntelClear-vi, IntelClear, Verdana, Arial !important;
+}
+
+#quiz-body {
+    font-family: IntelClear-vi, IntelClear, Verdana, Arial !important; 
+}
+
+#quiz-body .neoSans {  font-family: IntelClear-vi, IntelClear, Verdana, Arial !important; } 
+
+#legal_wrapper_full_inner {  font-family: IntelClear-vi, IntelClear, Verdana, Arial !important; }  
+
+*, *:before, *:after {
+  	font-family: IntelClear-vi, IntelClear, Verdana, Arial !important;
+}
